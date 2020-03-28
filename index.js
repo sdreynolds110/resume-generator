@@ -2,13 +2,16 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 const generateHTML = require("./generateHTML");
+const convertFactory = require("electron-html-to");
 
-
+const conversion = convertFactory({
+  converterPath: convertFactory.converters.PDF
+});
 gitHubInfo = async (username, chosenColor) => {
   let res = await axios.get("https://api.github.com/users/" + username);
   const data = res.data;
   await fs.writeFile(
-
+    "index.html",
     generateHTML.generateHTML(data, chosenColor),
     function(err) {
       if (err) {
