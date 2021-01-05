@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sdreynolds110/resume-generator.git#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "electron-html-to": "^2.6.0",
     "electron-prebuilt": "^1.4.13",
     "inquirer": "^6.3.1"
